@@ -1,2 +1,2 @@
-add_executable(Executable main.cc)
-target_link_libraries(Executable PUBLIC Library) # We are linking our library to our executable, so when we build our executable, library gets built with it
+add_executable(${EXECUTABLE_NAME} main.cc)
+target_link_libraries(${EXECUTABLE_NAME} PUBLIC ${LIBRARY_NAME}) # We are linking our library to our executable, so when we build our executable, library gets built with it
