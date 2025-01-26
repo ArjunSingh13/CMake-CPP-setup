@@ -14,9 +14,10 @@ set(CMAKE_CXX_EXTENSIONS        OFF)  #gcc and g++ has some extra features that 
 set(LIBRARY_NAME "Library") # create a cmake variable, use in all subdirectories.
 set(EXECUTABLE_NAME "Executable")
 
-option(COMPILE_EXECUTABLE "Whether to compile the executable" OFF) #adding option to choose between if main app should be built as exec or not.
+option(COMPILE_EXECUTABLE "Whether to compile the executable" ON) #adding option to choose between if main app should be built as exec or not.
 
 #Tell CMake where to search for sub CMake files.
+add_subdirectory(configured)
 add_subdirectory(src) # src must be defined first, because we are using the library in app.
 add_subdirectory(inc) # inc comes after src, need to keep this order.
 

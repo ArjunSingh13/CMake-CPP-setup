@@ -1,0 +1,29 @@
+/**
+ * @file config.hpp.in
+ * @author arjun kalsi (arjunkalsi13@gmail.com)
+ * @brief files with suffix .in means CMake can use, edit or copy from this file. 
+ * Add CMake based names such as PROJECT_NAME in between @ signs. Then when we configure the project, those names get taken from 
+ * CMakeLists.txt file and a new file called fileName.hpp gets created in build folder which can be used in the project. this file
+ * has updated values for this @ signs based values.
+ * 
+ *  
+ * 
+ * @version 0.1
+ * @date 2025-01-25
+ * 
+ * @copyright Copyright (c) 2025
+ * 
+ */
+
+#pragma once
+
+#include <cstdint>
+#include <string_view>
+
+// @ Below tells Cmake to later replace PROJECT_NAME with actual project name.
+static constexpr std::string_view project_name = "@PROJECT_NAME@"; 
+static constexpr std::string_view project_version = "@PROJECT_VERSION@";
+
+static constexpr std::int32_t project_version_major{@PROJECT_VERSION_MAJOR@};
+static constexpr std::int32_t project_version_minor{@PROJECT_VERSION_MINOR@};
+static constexpr std::int32_t project_version_patch{@PROJECT_VERSION_PATCH@};

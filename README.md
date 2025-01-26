@@ -18,3 +18,7 @@ if they dont have any code files in those subdirectories , add -> add_subdirecto
 11. Its a good practice to create executable name in top CMakeLists.txt file and then use them in subdirectories. also we add subdirectories in our main CMakeLists.txt so that how it knows
 12. We can add option to have some conditions based on it, example building executable or not.
 13. We can also pass that variables values at cmake configuration time, eg, cmake .. -D(VARIABLE_NAME)=(VALUE) -> cmake .. -DCOMPILE_EXECUTABLE=ON. In this example app executable will be part of build when we build in next command.
+14. cmake .. -G "name of the compiler here" example, cmake .. -G "Visual Studio 16 2019".
+15. cmake -DCMAKE_BUILD_TYPE=Release .. example to change between release and debug?
+16. CMakeCache file in build folder contains variables values that it uses if we dont reconfigure the project. if you dont want to reconfigure for some quick change and build it once, just search variable in CMakeCache.txt and change it example on to off.
+17. 
