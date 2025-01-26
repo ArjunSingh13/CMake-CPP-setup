@@ -1,4 +1,7 @@
-add_executable(${EXECUTABLE_NAME} main.cc)
+set(EXE_SOURCES
+    "main.cc")
+
+add_executable(${EXECUTABLE_NAME} ${EXE_SOURCES})
 
 # Include the configured directory
 target_include_directories(${EXECUTABLE_NAME} PUBLIC "${CMAKE_BINARY_DIR}/configured_files/include")
